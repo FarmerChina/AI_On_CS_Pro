@@ -1,0 +1,89 @@
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 整体页面 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+/* 主容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 居中辅助类 */
+.center {
+    text-align: center;
+}
+
+/* Header 部分 */
+.site-header {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 各个Section间距 */
+.container section {
+    margin-top: 60px;
+}
+
+/* 标题 */
+h2,
+h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 文字段落 */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 无序列表 */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table td {
+    padding: 10px;
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 鼠标悬停链接淡入淡出效果 */
+a {
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
