@@ -1,89 +1,266 @@
-/* 重置默认样式 */
+/* 全局样式重置 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 整体页面 */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-    background-color: #f8f8f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* 主容器 */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-/* 居中辅助类 */
+/* 头部样式 */
+.site-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.site-header img {
+    transition: transform 0.3s ease;
+}
+
+.site-header img:hover {
+    transform: scale(1.05);
+}
+
+.site-header h2 {
+    color: #2c3e50;
+    margin: 20px 0;
+    font-size: 2.5em;
+}
+
+.site-header p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 内容区域通用样式 */
+section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
 .center {
     text-align: center;
 }
 
-/* Header 部分 */
-.site-header {
-    padding-bottom: 40px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-/* 各个Section间距 */
-.container section {
-    margin-top: 60px;
-}
-
-/* 标题 */
-h2,
 h3 {
-    font-weight: 600;
+    color: #2c3e50;
     margin-bottom: 20px;
+    font-size: 1.8em;
 }
 
-/* 文字段落 */
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* 无序列表 */
-ul {
+/* 特性列表样式 */
+.features ul {
     list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
-ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e0e0e0;
+.features li {
+    margin: 15px 0;
+    padding-left: 25px;
+    position: relative;
 }
 
-/* 表格样式 */
-table {
+.features li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* 截图展示样式 */
+.screenshots table {
     width: 100%;
-    border-collapse: collapse;
+    border-spacing: 15px;
+    border-collapse: separate;
+}
+
+.screenshots img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.screenshots img:hover {
+    transform: translateY(-5px);
+}
+
+/* 联系方式样式 */
+.contact img {
+    max-width: 200px;
+    border-radius: 8px;
     margin: 20px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-table td {
-    padding: 10px;
+/* RoadMap样式 */
+.roadmap ul {
+    list-style: none;
+    padding: 0 20px;
 }
 
-/* 图片样式 */
-img {
-    max-width: 100%;
-    height: auto;
+.roadmap li {
+    margin: 12px 0;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-/* 鼠标悬停链接淡入淡出效果 */
-a {
-    color: inherit;
+.roadmap li:hover {
+    background: #eef2f7;
+    transform: translateX(5px);
+}
+
+/* 底部样式 */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer .center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
     transition: opacity 0.3s ease;
 }
 
-a:hover {
+.footer a:hover {
     opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .screenshots table {
+        display: block;
+    }
+
+    .screenshots td {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+.download {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.download-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.download-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+}
+
+.download-icon {
+    font-size: 3em;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.download-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    display: flex;
+    flex-direction: column;
+    background: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: #2980b9;
+}
+
+.download-button span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.download-button small {
+    font-size: 0.8em;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .download-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .download-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
